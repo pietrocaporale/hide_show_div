@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+ pit - 13 nov 2022  - 12:29:47
+
+For use this code:
+1) include jQuery library,
+        manCookies.js for update setting in cookie form,
+        hide_show_lib.js the code for hide and show
+
+2) set div you want to hide-show with showbox class
+3) add two button with id = "butUp" and "butDn"
+
+-->
+<html>
+    <head>
+        <title>hide_show_div</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="icon" href="images/favicon.ico" />
+        <script src="js/jquery-1.12.3.min.js"></script>
+        <script src="js/manCookies.js"></script>
+        <script src="js/hide_show_lib.js"></script>
+    </head>
+    <body>
+        <div id="wrapper" class="center">
+            <h1>Simple jQuery code for hide and show div</h1>
+
+            <div id="content" class="center">
+                <div id="commandbox">
+                    <div class="desc">Click this button for hide and show</div>
+                    <input type="button" class="btnUpDown button1" id="butUp" value="&#8743;" title="hide panel"/>
+                    <input type="button" class="btnUpDown button1" id="butDn" value="&#8744;" title="show panel"/>
+                </div>
+                <div id="content_p" class="center showbox">
+                    <p>
+                        ❝This is the section the button operates on. Of course it can contain anything.❞
+                    </p>
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut iaculis ante. Nullam tempor laoreet orci, id efficitur augue interdum convallis. Maecenas
+                    </p>
+                    <picture>
+                        <source type="image/webp" srcSet="images/speed.webp" />
+                        <img src="images/speed.jpg" alt="Girl in a jacket" width="200" height="100" />
+                    </picture>
+                </div>
+
+            </div>
+        </div>
+        <script>
+
+            $(document).ready(function () {
+                setPageState();
+                manageButton();
+            });
+
+        </script>
+
+    </body>
+</html>
